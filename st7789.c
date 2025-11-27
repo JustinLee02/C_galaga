@@ -4,9 +4,10 @@
 #include <string.h>
 #include "st7789.h"
 
-#define STB_IMAGE_IMPLEMENTATION
+#define STB_IMAGE_IMPLEMENTATION # png image file load lib
 #include "stb_image.h"
 
+# ST7789 Commands
 #define CMD_SWRESET     0x01
 #define CMD_SLPOUT      0x11
 #define CMD_COLMOD      0x3A
@@ -18,7 +19,9 @@
 #define CMD_RASET       0x2B
 #define CMD_RAMWR       0x2C
 
+# Buffer -> UpdateScreen()
 static uint16_t frameBuffer[ST7789_WIDTH * ST7789_HEIGHT];
+
 
 static void SelectDataMode(void) {
     bcm2835_gpio_write(ST7789_PIN_DC, HIGH);
@@ -41,6 +44,7 @@ static void WriteData(uint8_t data) {
     SelectDataMode();
     WriteByte(data);
 }
+
 
 void ST7789_Init(void) {
     bcm2835_gpio_fsel(ST7789_PIN_DC, BCM2835_GPIO_FSEL_OUTP);
