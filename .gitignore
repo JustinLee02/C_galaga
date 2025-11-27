@@ -1,0 +1,11 @@
+# 컴파일된 실행 파일 제외
+galaga
+
+# 컴파일 중간 단계 파일(Object file) 제외
+*.o
+
+# 맥북 시스템 파일 제외
+.DS_Store
+
+# VS Code 설정 폴더 제외 (선택사항)
+.vscode/
