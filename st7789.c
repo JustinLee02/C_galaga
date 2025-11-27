@@ -7,7 +7,7 @@
 #define STB_IMAGE_IMPLEMENTATION # png image file load lib
 #include "stb_image.h"
 
-# ST7789 Commands
+// ST7789 Commands
 #define CMD_SWRESET     0x01
 #define CMD_SLPOUT      0x11
 #define CMD_COLMOD      0x3A
@@ -19,7 +19,7 @@
 #define CMD_RASET       0x2B
 #define CMD_RAMWR       0x2C
 
-# Buffer -> UpdateScreen()
+// Buffer -> UpdateScreen()
 static uint16_t frameBuffer[ST7789_WIDTH * ST7789_HEIGHT];
 
 
