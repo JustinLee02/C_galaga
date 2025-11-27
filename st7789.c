@@ -4,7 +4,7 @@
 #include <string.h>
 #include "st7789.h"
 
-#define STB_IMAGE_IMPLEMENTATION # png image file load lib
+#define STB_IMAGE_IMPLEMENTATION // png image file load lib
 #include "stb_image.h"
 
 // ST7789 Commands
